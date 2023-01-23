@@ -6,9 +6,15 @@ $('body').terminal({
     },
     "Dir();": function() {
         this.echo(ls);
+    },
+    "Reboot;": function() {
+        location.reload();
+    },
+    "Reboot();": function() {
+        location.reload();
     }
 },
  {
     prompt: 'C:/Home>',
-    greetings: 'Welcome to The Holy Church of Terry Davis'
+    greetings: ls
 });
