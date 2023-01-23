@@ -12,9 +12,34 @@ $('body').terminal({
     },
     "Reboot();": function() {
         location.reload();
+    },
+    "DocClear;": function() {
+        this.clear();
+    },
+    "$CL$": function() {
+        this.clear();
     }
 },
  {
     prompt: 'C:/Home>',
-    greetings: ls
+    greetings: ls, 
+    clear: false,
+    login: function(user, password, callback) {
+        if (user == 'demo' && password == 'secret') {
+            this.clear();
+            callback('AUTHENTICATION TOKEN');
+        } else {
+            callback(null);
+        }
+    },
+    onCommandNotFound: function(command, terminal) {
+        this.echo("ERROR: Undefined identifier at \"" + command + "\"");
+    }
 });
+
+/*
+onCommandNotFound [function(command, terminal)]
+        function is executed if there are no commands with
+    that name, by default terminal display error message,
+    it will not work if you use function as an interpreter.
+*/
