@@ -3,6 +3,10 @@ body {
     font-family: "Ubuntu";
     padding: 0;
     margin: 0;
+    background-color: rgb(20,25,20);
+    color:rgb(221, 221, 221);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* http://aleclownes.com/2017/02/01/crt-display.html */
@@ -164,6 +168,8 @@ body {
     pointer-events: none;
 }
 .crt {
+    padding-left: 2%;
+    padding-right: 2%;
     animation: textShadow 1.6s infinite;
 }
 /* end of crt */
