@@ -1,4 +1,6 @@
-const ls = 'Directory of C:/Home\nDATE_  TIME_  SIZE\n01/23  14:00  0000  .\n01/23  14:00  0000  ..\n01/23  14:03  0002  file1.TXT\n01/23  14:06  0016  file2.TXT\n??/??  ??:??  0427  runme.HC\n0.005024s  ans=0x00000007=7';
+const ls = 'Directory of C:/Home\nDATE_  TIME_  SIZE\n01/23  14:00  0000  .\n01/23  14:00  0000  ..\n01/23  14:03  0030  invite.TXT\n01/24  9:14  0132  aboutus.TXT\n??/??  ??:??  0427  runme.HC\n0.005024s  ans=0x00000007=7';
+const aboutus ='We are THE Holy Church of Terry Davis.\nHere at THCoTD we:\n    - Shitpost\n    - Worship Terry\n    - Do community coding projects';
+const invte = 'https://discord.gg/xEFtNzEzE8';
 
 $('body').terminal({
     "Dir;": function() {
@@ -18,6 +20,15 @@ $('body').terminal({
     },
     "$CL$": function() {
         this.clear();
+    },
+    "Type(": function(file) {
+        if (file.toLower() == '"aboutus.txt");' || "'aboutus.txt');") {
+            this.echo(aboutus);
+        } else if (file.toLower() == '"invite.txt");' || "'invite.txt');") {
+            this.echo(invite);
+        } else {
+            this.echo("ERROR! File not found.");
+        }
     }
 },
  {
