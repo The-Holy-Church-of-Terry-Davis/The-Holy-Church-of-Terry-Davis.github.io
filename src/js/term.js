@@ -1,6 +1,8 @@
-const ls = 'Directory of C:/Home\nDATE_  TIME_  SIZE\n01/23  14:00  0000  .\n01/23  14:00  0000  ..\n01/23  14:03  0030  invite.TXT\n01/24  09:14  0132  aboutus.TXT\n??/??  ??:??  0427  runme.HC\n0.005024s  ans=0x00000007=7';
+const ls = 'Directory of C:/Home\nDATE_  TIME_  SIZE\n01/23  14:00  0000  .\n01/23  14:00  0000  ..\n01/23  14:03  0030  invite.TXT\n01/24  09:14  0132  aboutus.TXT\n01/23  14:00  013E  MakeHome.HC.Z\n01/23  14:00  01D3  Registry.HC.Z\n0.005024s  ans=0x00000007=7';
 const aboutus ='We are THE Holy Church of Terry Davis.\nHere at THCoTD we:\n    - Shitpost\n    - Worship Terry\n    - Do community coding projects';
 const invite = 'https://discord.gg/xEFtNzEzE8';
+const makehome = 'Cd(__DIR__);;\n//If these are not present in /Home, it uses the version in the root dir. You\n//can make your own, modified, version of these files in your /Home directory.\n#include "~/HomeLocalize"\n#include "/Adam/Opt/Boot/MakeBoot"\n#include "/Adam/Opt/Utils/MakeUtils"\n#include "~/HomeWrappers"\nMapFileLoad("::/Kernel/Kernel");\nMapFileLoad("::/Compiler/Compiler");\n#include "~/HomeKeyPlugIns"\n#include "~/HomeSys"\nCd("..");;\n\n0.000211s ans=0x00000001=1';
+const registry = '+] Adam\n+] Once\n\n0.000310s ans=0x00000001=1';
 
 $('body').terminal({
     "Dir;": function() {
@@ -26,6 +28,18 @@ $('body').terminal({
     },
     'Type("invite.TXT");': function() {
         this.echo(invite);
+    },
+    'Type("MakeHome.HC.Z");': function() {
+        this.echo(makehome);
+    },
+    'Type("Registry.HC.Z");': function() {
+        this.echo(registry);
+    },
+    'Cd(".");': function() {
+        this.echo("0.000041s ans=0x00000001=1");
+    },
+    'Cd("..");': function() {
+        this.echo("ERROR! Unable.");
     }
     
 },
