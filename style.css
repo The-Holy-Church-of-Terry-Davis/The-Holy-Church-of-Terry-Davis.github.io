@@ -1,0 +1,292 @@
+html {
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3dc75;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+/* Create a custom scrollbar track */
+body::-webkit-scrollbar {
+    width: 20px;
+    background-color: #d0d0d0;
+    border: 2px solid #dcdcdc;
+    border-style: inset;
+}
+
+/* Create a custom scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+    background-color: #bfbfbf;
+    border: 2px solid #eeeeee;
+    border-style: outset;
+}
+
+/* Modify appearance on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #ababab;
+}
+
+/* Modify appearance when dragging */
+body::-webkit-scrollbar-thumb:active {
+    background-color: #9d9d9d;
+}
+
+/* Style the scrollbar buttons */
+body::-webkit-scrollbar-button:vertical:single-button {
+    display: block;
+    width: 16px;
+    height: 20px;
+    background-color: #bfbfbf;
+    border: 2px solid #dcdcdc;
+    border-style: outset;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Style the scrollbar top button (arrow) */
+body::-webkit-scrollbar-button:vertical:single-button:increment {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='20' fill='%23969696'><polygon points='8,20 0,0 16,0'/></svg>");
+}
+
+/* Style the scrollbar top button (arrow) on hover */
+body::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='20' fill='%23112121'><polygon points='8,20 0,0 16,0'/></svg>");
+}
+
+/* Style the scrollbar bottom button (arrow) */
+body::-webkit-scrollbar-button:vertical:single-button:decrement {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='20' fill='%23969696'><polygon points='0,20 16,20 8,0'/></svg>");
+}
+
+/* Style the scrollbar bottom button (arrow) on hover */
+body::-webkit-scrollbar-button:vertical:single-button:decrement:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='20' fill='%23112121'><polygon points='0,20 16,20 8,0'/></svg>");
+}
+
+
+
+
+
+navbar {
+    display: inline-flex;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    width: 100%;
+    font-weight: bold;
+    font-size: small;
+}
+
+navbar divider {
+    width: 0;
+    border-left: .1px solid white;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+navbar a {
+    text-align: center;
+    margin: 0;
+    width: auto;
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transform: scaleY(.85);
+}
+
+navbar a:first-child {
+    text-align: center;
+    margin: 0;
+    width: auto;
+    text-decoration: none;
+    color: white;
+    padding: 2px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+}
+
+a:hover {
+    opacity: .8;
+}
+
+#page-content {
+    width: 55vw;
+    max-width: 1000px;
+    background-color: #ffffff;
+
+    border-color: #aaaaaa;
+    border-right-style: ridge;
+    border-left-style: ridge;
+}
+
+#section-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    /* To prevent overflowing content from being visible */
+}
+
+#left-section,
+#middle-section,
+#right-section {
+    /* flex: 1; */
+    border: 1px solid #ccc;
+}
+
+#left-section {
+    flex: 1.3;
+    display: flex;
+    flex-direction: column;
+    background-color: #54fcfc;
+}
+
+#middle-section {
+    flex: 3;
+}
+
+#right-section {
+    flex: 1.3;
+}
+
+#banner {
+    position: relative;
+    background-image: url("assets/BANNER.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 3.5/1;
+}
+
+#elephant {
+    position: relative;
+    background-image: url("assets/ELEPHANT.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    aspect-ratio: 1/1;
+}
+
+#contents-div {
+    background-color: #fdfda2;
+    padding: 5px;
+    color: black;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+
+    border: 1px solid #aaa;
+    border-style: outset;
+}
+
+.left-content-section {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    margin-bottom: 0px;
+}
+
+.left-content-section h3 {
+    font-size: large;
+    transform: scaleY(.95);
+    margin: 0;
+}
+
+.left-content-section a {
+    margin: 0;
+    color: #2659ad;
+}
+
+.marquee {
+    font-size: 20px;
+    animation: marquee 5s linear infinite;
+}
+
+.middle-section-posts {
+    margin: 20px;
+}
+
+.middle-section-posts .message {
+    padding: 0 5px;
+}
+
+.middle-section-posts .message a {
+    color: #2659ad;
+    font-weight: bold;
+}
+
+.middle-section-posts .message a#title {
+    font-size: large;
+
+}
+
+.middle-section-posts .message p {
+    margin-top: 5px;
+}
+
+.middle-section-posts header {
+    padding: 5px 10px;
+    margin-bottom: 15px;
+
+    font-weight: bold;
+    font-size: larger;
+
+    border-top: 3px solid #54fcfc;
+
+    /*Grainy Shit*/
+    background-image:
+        repeating-linear-gradient(0deg,
+            rgba(253, 253, 162, 0.2) 0,
+            rgba(253, 253, 162, 0.2) 1px,
+            transparent 1px,
+            transparent 2px),
+        linear-gradient(to right, #fdfda2, transparent 92%, white 95%);
+
+
+}
+
+.right-content-section {
+    padding: 10px 0px;
+    margin: 0 15px;
+    border-bottom: 3px solid #aaa;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px outset #aaa;
+    border-bottom: 2px outset #aaa;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(50vw);
+    }
+
+    50% {
+        transform: translateX(-50vw);
+    }
+
+    100% {
+        transform: translateX(50vw);
+    }
+}
