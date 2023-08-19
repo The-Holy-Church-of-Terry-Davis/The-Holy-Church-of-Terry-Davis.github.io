@@ -1,6 +1,6 @@
 console.log("Unfortunately I have to use JS... - QAEZZ");
 
-fetch('http://45.79.84.185:8000/posts.json')
+fetch('posts.json')
     .then(response => response.json())
     .then(postsData => {
         console.log("Got Data.");
