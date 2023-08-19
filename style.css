@@ -8,8 +8,14 @@ body {
     padding: 0;
     background-color: #f3dc75;
     color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     min-height: 100vh;
 
@@ -17,6 +23,22 @@ body {
     /* Firefox */
     -ms-overflow-style: none;
     /* IE and Edge */
+}
+
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f3dc75;
+        color: #000000;
+        min-height: 100vh;
+
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
 }
 
 /* Create a custom scrollbar track */
@@ -81,6 +103,8 @@ body::-webkit-scrollbar-button:vertical:single-button:decrement:hover {
 
 
 navbar {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     background-color: #000000;
     color: #ffffff;
@@ -108,6 +132,8 @@ navbar a {
     padding: 2px;
     padding-top: 5px;
     padding-bottom: 5px;
+    -webkit-transform: scaleY(.85);
+    -ms-transform: scaleY(.85);
     transform: scaleY(.85);
 }
 
@@ -139,7 +165,12 @@ a:hover {
 
 #section-wrapper {
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     overflow: hidden;
     /* To prevent overflowing content from being visible */
@@ -153,17 +184,28 @@ a:hover {
 }
 
 #left-section {
+    -webkit-box-flex: 1.3;
+    -ms-flex: 1.3;
     flex: 1.3;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background-color: #54fcfc;
 }
 
 #middle-section {
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
     flex: 3;
 }
 
 #right-section {
+    -webkit-box-flex: 1.3;
+    -ms-flex: 1.3;
     flex: 1.3;
 }
 
@@ -197,7 +239,12 @@ a:hover {
 
 .left-content-section {
     text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     margin: 15px;
     margin-bottom: 0px;
@@ -205,6 +252,8 @@ a:hover {
 
 .left-content-section h3 {
     font-size: large;
+    -webkit-transform: scaleY(.95);
+    -ms-transform: scaleY(.95);
     transform: scaleY(.95);
     margin: 0;
 }
@@ -216,6 +265,7 @@ a:hover {
 
 .marquee {
     font-size: 20px;
+    -webkit-animation: marquee 5s linear infinite;
     animation: marquee 5s linear infinite;
 }
 
@@ -257,6 +307,20 @@ a:hover {
             rgba(253, 253, 162, 0.2) 1px,
             transparent 1px,
             transparent 2px),
+        -webkit-gradient(linear, left top, right top, from(#fdfda2), color-stop(92%, transparent), color-stop(95%, white));
+    background-image:
+        -o-repeating-linear-gradient(bottom,
+            rgba(253, 253, 162, 0.2) 0,
+            rgba(253, 253, 162, 0.2) 1px,
+            transparent 1px,
+            transparent 2px),
+        -o-linear-gradient(left, #fdfda2, transparent 92%, white 95%);
+    background-image:
+        repeating-linear-gradient(0deg,
+            rgba(253, 253, 162, 0.2) 0,
+            rgba(253, 253, 162, 0.2) 1px,
+            transparent 1px,
+            transparent 2px),
         linear-gradient(to right, #fdfda2, transparent 92%, white 95%);
 
 
@@ -277,16 +341,36 @@ footer {
     border-bottom: 2px outset #aaa;
 }
 
-@keyframes marquee {
+@-webkit-keyframes marquee {
     0% {
+        -webkit-transform: translateX(50vw);
         transform: translateX(50vw);
     }
 
     50% {
+        -webkit-transform: translateX(-50vw);
         transform: translateX(-50vw);
     }
 
     100% {
+        -webkit-transform: translateX(50vw);
+        transform: translateX(50vw);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        -webkit-transform: translateX(50vw);
+        transform: translateX(50vw);
+    }
+
+    50% {
+        -webkit-transform: translateX(-50vw);
+        transform: translateX(-50vw);
+    }
+
+    100% {
+        -webkit-transform: translateX(50vw);
         transform: translateX(50vw);
     }
 }
