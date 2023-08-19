@@ -1,5 +1,5 @@
 {
-  "total_posts": 3,
+  "total_posts": 4,
   "posts": [
     {
       "id": 0,
@@ -21,6 +21,13 @@
       "title": "Welcome To Our Community Page! - 8/19/2023 by Yendy, The Owner",
       "title_link": "https://discord.gg/xEFtNzEzE8",
       "content": "Hello from the owner of THCoTD! I would like to announce and present to you our organization wide site! I also would like to announce an upcoming SWCP (Sever-wide Coding Project). For people who want to help we will soon be developing a webapp for THCoTD coms. This site will be running via TOR so we dont have to pay for hosting because that is based! (TOR coming soon for THIS site - qaezz) Anyone who wants to join the project can join our <a href='https://discord.gg/xEFtNzEzE8' target='_blank'>server</a> and ask to be put on the project. As for people in the <a href='https://discord.gg/xEFtNzEzE8' target='_blank'>server</a> you can also ask!"
+    },
+    {
+      "id": 3,
+      "headline": false,
+      "title": "Release of the Blog Creation Tool - 08/19/2023 by QAEZZ, The Consigliere",
+      "title_link": "https://thcotd.org",
+      "content": "Hello all, it is currently 5:08am. I have spent too long making this tool. Anyways, Admins now have a blog creation tool at their disposal. It is 100x easier than manually writing in the `posts.json` file. This tool is effect of manifesting my inner broke mentality. Instead of paying for hosting, or a DB, or any of that fancy (proper) shit... The <a href=\"https://discord.gg/xEFtNzEzE8\" target=\"_blank\">Discord</a> bot pushes a file change (posts.json) to the repo. Then whenever you load the site, JS looks in that file and renders the posts. It is now 5:12am. I can't English. Good night.. or Good morning? idk. piss off..."
     }
   ]
 }
