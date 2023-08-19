@@ -1,3 +1,17 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 10 versions,IE 11
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 10 versions,IE 11
+*/
+
 html {
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
@@ -94,7 +108,8 @@ navbar {
     color: #ffffff;
     padding: 0;
     margin: 0;
-    gap: 20px;
+    /* gap: 20px; */
+    /* removed gap because it doesnt work on IE11. I replaced it by adding a 20px margin to the sides of the divider below. */
     width: 100%;
     font-weight: bold;
     font-size: small;
@@ -105,6 +120,7 @@ navbar divider {
     border-left: .1px solid white;
     margin-top: 4px;
     margin-bottom: 4px;
+    margin: 0 20px;
 }
 
 navbar a {
@@ -157,13 +173,11 @@ a:hover {
     -ms-flex-direction: row;
     flex-direction: row;
     overflow: hidden;
-    /* To prevent overflowing content from being visible */
 }
 
 #left-section,
 #middle-section,
 #right-section {
-    /* flex: 1; */
     border: 1px solid #ccc;
 }
 
@@ -198,15 +212,22 @@ a:hover {
     background-image: url("assets/BANNER.png");
     background-size: contain;
     background-repeat: no-repeat;
-    aspect-ratio: 3.5/1;
+    width: 100%; /* Set the width to 100% or a specific value */
+    height: 0;   /* Set the height to 0 */
+    padding-bottom: 28.57%; /* Maintain a 3.5:1 aspect ratio (100 / 3.5) */
+
+    /* removed aspect-ratio because IE11 doesnt support it. */
 }
+
 
 #elephant {
     position: relative;
     background-image: url("assets/ELEPHANT.png");
     background-size: contain;
     background-repeat: no-repeat;
-    aspect-ratio: 1/1;
+    width: 100%; /* Set the width to 100% or a specific value */
+    height: 0;   /* Set the height to 0 */
+    padding-bottom: 100%; /* Maintain a square aspect ratio */
 }
 
 #contents-div {
@@ -286,19 +307,19 @@ a:hover {
 
     /*Grainy Shit*/
     background-image:
-        repeating-linear-gradient(0deg,
-            rgba(253, 253, 162, 0.2) 0,
-            rgba(253, 253, 162, 0.2) 1px,
-            transparent 1px,
-            transparent 2px),
-        -webkit-gradient(linear, left top, right top, from(#fdfda2), color-stop(92%, transparent), color-stop(95%, white));
-    background-image:
         -o-repeating-linear-gradient(bottom,
             rgba(253, 253, 162, 0.2) 0,
             rgba(253, 253, 162, 0.2) 1px,
             transparent 1px,
             transparent 2px),
         -o-linear-gradient(left, #fdfda2, transparent 92%, white 95%);
+    background-image:
+        repeating-linear-gradient(0deg,
+            rgba(253, 253, 162, 0.2) 0,
+            rgba(253, 253, 162, 0.2) 1px,
+            transparent 1px,
+            transparent 2px),
+        -webkit-gradient(linear, left top, right top, from(#fdfda2), color-stop(92%, transparent), color-stop(95%, white));
     background-image:
         repeating-linear-gradient(0deg,
             rgba(253, 253, 162, 0.2) 0,
@@ -394,16 +415,23 @@ footer {
     } 
 
     #middle-section {
-        flex: 1.5;
+        -webkit-box-flex: 1.5;
+            -ms-flex: 1.5;
+                flex: 1.5;
     }
 
     #right-section {
-        flex: 1;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
     }
 
     navbar {
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 10px;
     }
 }
