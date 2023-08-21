@@ -1,5 +1,5 @@
 {
-  "total_posts": 4,
+  "total_posts": 5,
   "posts": [
     {
       "id": 0,
@@ -28,6 +28,13 @@
       "title": "Release of the Blog Creation Tool - 08/19/2023 by QAEZZ, The Consigliere",
       "title_link": "https://thcotd.org",
       "content": "Hello all, it is currently 5:08am. I have spent too long making this tool. Anyways, Admins now have a blog creation tool at their disposal. It is 100x easier than manually writing in the `posts.json` file. This tool is effect of manifesting my inner broke mentality. Instead of paying for hosting, or a DB, or any of that fancy (proper) shit... The <a href=\"https://discord.gg/xEFtNzEzE8\" target=\"_blank\">Discord</a> bot pushes a file change (posts.json) to the repo. Then whenever you load the site, JS looks in that file and renders the posts. It is now 5:12am. I can't English. Good night.. or Good morning? idk. piss off..."
+    },
+    {
+      "id": 4,
+      "headline": false,
+      "title": "Start of our UEFI x86_64 OS, DivinityC - 08/21/2023 by QAEZZ, The Consigliere",
+      "title_link": "https://github.com/the-holy-church-of-terry-davis/divinityc-x86_64",
+      "content": "I've officialy started development of Divinity in C (DivinityC). The official Divinity OS is going to be in Yendy's language called Emerald. The ETA on this is unclesr as school just started back up. I will keep this blog updated for the 2 of you that read this. Cya \ud83d\udc4b."
     }
   ]
 }
