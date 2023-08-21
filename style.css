@@ -154,8 +154,9 @@ a:hover {
 }
 
 #page-content {
-    width: 55vw;
-    max-width: 1000px;
+    /* width: 60vw; */
+    max-width: clamp(1000px, 1000px, 1500px);
+    flex: 2;
     background-color: #ffffff;
 
     border-color: #aaaaaa;
@@ -382,7 +383,7 @@ footer {
 
 
 /* Tablet and smaller devices */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     * {
         overflow-x: scroll !important;
     }
@@ -434,4 +435,9 @@ footer {
                 justify-content: center;
         gap: 10px;
     }
+}
+
+/* Galaxy Fold */
+@media (max-width: 280px) {
+    #right-section { display: none; }
 }
