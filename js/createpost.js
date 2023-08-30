@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             const postTitleLink = document.getElementById("postTitleLink").value;
             const postBody = document.getElementById("postBody").value;
             const accessToken = document.getElementById("accessToken").value;
-            const discordID = document.getElementById("discordID").value;
+            const discordID = document.getElementById("discordID").value; 
             const isHeadline = document.getElementById("isHeadline").checked;
 
             const validDiscordIDs = [
