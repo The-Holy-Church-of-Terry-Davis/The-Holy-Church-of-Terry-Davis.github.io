@@ -1,5 +1,5 @@
 {
-  "total_posts": 5,
+  "total_posts": 6,
   "posts": [
     {
       "id": 0,
@@ -11,9 +11,9 @@
     {
       "id": 1,
       "headline": false,
-      "title": "I begun work on an OS. - 08/18/2023 by QAEZZ, The Consigliere",
+      "title": "I've started work on an OS. - 08/18/2023 by QAEZZ, The Consigliere",
       "title_link": "https://github.com/qaezz/tihsos-64",
-      "content": "I am currently developing an x86_64 OS called \"tihsOS-64\". I'm Currently working on the kernel and a basic shell. Keyboard input is succesfully working. For more information, visit the GitHub <a href='https://github.com/qaezz/tihsos-64' target='_blank'>repository</a>. This is a prelude to an OS Yendy and I are gonna be making when he finished his language <a href='https://github.com/YendisFish/Emerald' target='_blank'>Emerald</a>."
+      "content": "<code>Edited on: 8/30/2023</code><br/>I am currently developing an x86_64 OS called \"tihsOS-64\". I'm Currently working on the kernel and a basic shell. Keyboard input is succesfully working. For more information, visit the GitHub <a href='https://github.com/qaezz/tihsos-64' target='_blank'>repository</a>. This is a prelude to an OS Yendy and I are gonna be making when he finished his language <a href='https://github.com/YendisFish/Emerald' target='_blank'>Emerald</a>."
     },
     {
       "id": 2,
@@ -34,7 +34,14 @@
       "headline": false,
       "title": "Start of our UEFI x86_64 OS, DivinityC - 08/21/2023 by QAEZZ, The Consigliere",
       "title_link": "https://github.com/the-holy-church-of-terry-davis/divinityc-x86_64",
-      "content": "I've officialy started development of Divinity in C (DivinityC). The official Divinity OS is going to be in Yendy's language called Emerald. The ETA on this is unclesr as school just started back up. I will keep this blog updated for the 2 of you that read this. Cya \ud83d\udc4b."
+      "content": "I've officialy started development of Divinity in C (DivinityC). The official Divinity OS is going to be in Yendy's language called Emerald. The ETA on this is unclesr as school just started back up. I will keep this blog updated for the 2 of you that read this. Cya 👋."
+    },
+    {
+      "id": 5,
+      "headline": false,
+      "title": "New Blog Creation Tool - 8/29/2023 by QAEZZ, The Consigliere",
+      "title_link": "https://github.com/The-Holy-Church-of-Terry-Davis/The-Holy-Church-of-Terry-Davis.github.io/tree/main/admin",
+      "content": "I've created a new blog creation tool for the Admins. It's publicly available at <code>/admin</code>. However, only Admins can post as it requires a GitHub Personal Access Token that has write privilege to the site's <a href=\"https://github.com/The-Holy-Church-of-Terry-Davis/The-Holy-Church-of-Terry-Davis.github.io\" target=\"_blank\">repo</a>.<br/>\nNo Admin's token is logged nor stored. You can attempt to create a post, but if the access token is wrong/doesn't have write access, GitHub's API will throw an error. The JS is located at <code>/js/createpost.js</code>.<br/>\nHere are the available endpoints for admins (*coming soon™):\n<pre>\n<code>\n  /admin/createpost\n */admin/editpost\n */admin/removepost\n</code>\n</pre>\n\nRandom ass post, that's all.\n"
     }
   ]
 }

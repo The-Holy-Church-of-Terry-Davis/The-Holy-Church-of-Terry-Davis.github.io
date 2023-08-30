@@ -1,4 +1,5 @@
-console.log("Unfortunately I have to use JS... - QAEZZ");
+let start = Date.now();
+console.log("Unfortunately, I have to use JS... - QAEZZ");
 
 var xhr = new XMLHttpRequest();
 xhr.open('GET', 'posts.json', true);
@@ -50,7 +51,11 @@ function processData(postsData) {
         var contentParagraph = document.createElement('p');
         contentParagraph.innerHTML = post.content;
 
+        var idPortion = document.createElement('code');
+        idPortion.innerHTML = `<br/>Post ID: ${post.id}`;
+
         postDiv.appendChild(titleLink);
+        postDiv.appendChild(idPortion);
         postDiv.appendChild(contentParagraph);
 
         if (post.headline) {
@@ -72,3 +77,6 @@ function processData(postsData) {
         }
     }
 }
+
+let timeTaken = Date.now() - start;
+console.log("Posts loaded in: " + timeTaken + " milliseconds");
