@@ -142,7 +142,7 @@ function loadEditorDisabled(post) {
                 const repoName = "The-Holy-Church-of-Terry-Davis.github.io";
                 const filePath = "posts.json";
                 const branchName = "main";
-                const accessToken = "YOUR_GITHUB_ACCESS_TOKEN"; // Replace with your actual access token
+                const accessToken = document.getElementById("accessToken").value;
 
                 const getUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${filePath}`;
                 const getResponse = await fetch(getUrl, {
