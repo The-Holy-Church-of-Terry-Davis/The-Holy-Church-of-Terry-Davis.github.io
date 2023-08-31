@@ -49,7 +49,7 @@ function processData(postsData) {
         titleLink.innerHTML = post.title;
 
         var contentParagraph = document.createElement('p');
-        contentParagraph.innerHTML = post.content;
+        contentParagraph.innerHTML = post.content.replace("<!--start-edited-tag-->", "").replace("<!--end-edited-tag-->", "");
 
         var idPortion = document.createElement('code');
         idPortion.innerHTML = `<br/>Post ID: ${post.id}`;

@@ -15,6 +15,16 @@ function parsePostTitle(postTitle) {
     return [title, date, author];
 }
 
+function parsePostBody(postBody) {
+    const startIndex = postBody.indexOf("<!--start-edited-tag-->");
+    const endIndex = postBody.indexOf("<br/><!--end-edited-tag-->");
+
+    const editedTag = postBody.substring(0, endIndex+26).trim();
+    const body = postBody.replace(editedTag, "").trim();
+
+    return [editedTag, body];
+}
+
 function loadEditor(post) {
     const discordIDMap = {
         "Yendy": "259445589773647872",
@@ -28,6 +38,10 @@ function loadEditor(post) {
     title = postTitleParsed[0]
     date = postTitleParsed[1]
     author = postTitleParsed[2]
+
+    postBodyParsed = parsePostBody(post.content);
+    editedTag = postBodyParsed[0];
+    body = postBodyParsed[1];
 
     const editorHTML = `
         <header>Edit Post</header>
@@ -57,7 +71,7 @@ function loadEditor(post) {
                 <button type="button" id="insertCodeButton">Insert Code Tag</button>
             </div>
     
-            <textarea style="font-size: large;" id="postBody" name="postBody" rows="18" cols="75" required>${post.content}</textarea>
+            <textarea style="font-size: large;" id="postBody" name="postBody" rows="18" cols="75" required>${body}</textarea>
             <br/>
             <br/>
     
@@ -114,7 +128,7 @@ function loadEditor(post) {
             const centralTime = new Date(utcNow.getTime() + centralTzOffset);
             const editDate = centralTime.toLocaleDateString("en-US");
 
-            const formattedPostBody = `<code>Edited on: ${editDate}</code><br/>${postBody}`;
+            const formattedPostBody = `<!--start-edited-tag--><code>Edited on: ${editDate}</code><br/><!--end-edited-tag-->${postBody}`;
 
 
             const middleSection = document.querySelector(".middle-section-posts");
@@ -136,7 +150,7 @@ function loadEditor(post) {
             previewPostTitleLink.innerHTML = formattedTitle;
 
             const previewPostContentParagraph = document.createElement('p');
-            previewPostContentParagraph.innerHTML = formattedPostBody;
+            previewPostContentParagraph.innerHTML = formattedPostBody.replace("<!--start-edited-tag-->", "").replace("<!--end-edited-tag-->", "");;
 
             const previewPostIdPortion = document.createElement('code');
             previewPostIdPortion.innerHTML = `<br/>Post ID: ${postID}`;
