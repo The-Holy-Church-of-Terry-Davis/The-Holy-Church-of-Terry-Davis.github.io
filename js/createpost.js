@@ -2,6 +2,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const insertAnchorButton = document.getElementById('insertAnchorButton');
     const insertCodeButton = document.getElementById('insertCodeButton');
+    const insertItalicButton = document.getElementById('insertItalicButton');
+    const insertBoldButton = document.getElementById('insertBoldButton');
+    const insertUnderlineButton = document.getElementById('insertUnderlineButton');
+
     const postBody = document.getElementById('postBody');
 
     insertAnchorButton.addEventListener('click', function () {
@@ -17,6 +21,24 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedText = postBody.value.substring(postBody.selectionStart, postBody.selectionEnd);
         const codeTag = `<pre>\n<code>\n${selectedText}\n</code>\n</pre>`;
         postBody.value = postBody.value.slice(0, postBody.selectionStart) + codeTag + postBody.value.slice(postBody.selectionEnd);
+    });
+
+    insertItalicButton.addEventListener('click', function () {
+        const selectedText = postBody.value.substring(postBody.selectionStart, postBody.selectionEnd);
+        const italicTag = `<i>${selectedText}</i>`;
+        postBody.value = postBody.value.slice(0, postBody.selectionStart) + italicTag + postBody.value.slice(postBody.selectionEnd);
+    });
+
+    insertBoldButton.addEventListener('click', function () {
+        const selectedText = postBody.value.substring(postBody.selectionStart, postBody.selectionEnd);
+        const boldTag = `<b>${selectedText}</b>`;
+        postBody.value = postBody.value.slice(0, postBody.selectionStart) + boldTag + postBody.value.slice(postBody.selectionEnd);
+    });
+
+    insertUnderlineButton.addEventListener('click', function () {
+        const selectedText = postBody.value.substring(postBody.selectionStart, postBody.selectionEnd);
+        const underlineTag = `<u>${selectedText}</u>`;
+        postBody.value = postBody.value.slice(0, postBody.selectionStart) + underlineTag + postBody.value.slice(postBody.selectionEnd);
     });
 });
 

@@ -34,41 +34,50 @@
         <div class="middle-section-posts">
           <header>Create Post</header>
           <form id="textEditorForm">
-            <label for="postTitle">Post Title:</label><br/>
+            <label for="postTitle">Post Title:</label><br />
             <textarea style="font-size: large;" id="postTitle" name="postTitle" rows="1" cols="75" required></textarea>
-            <br/><br/>
+            <br /><br />
 
-            <label for="postTitleLink">Post Title Link:</label><br/>
-            <textarea style="font-size: large;" id="postTitleLink" name="postTitleLink" rows="1" cols="75" required></textarea>
-            <br/><br/>
-    
-            <label for="postBody">Post Body:</label><br/>
+            <label for="postTitleLink">Post Title Link:</label><br />
+            <textarea style="font-size: large;" id="postTitleLink" name="postTitleLink" rows="1" cols="75"
+              required></textarea>
+            <br /><br />
+
+            <label for="postBody">Post Body:</label><br />
             <div>
-                <button type="button" id="insertAnchorButton">Insert Anchor Tag</button>
-                <button type="button" id="insertCodeButton">Insert Code Tag</button>
+              <button type="button" id="insertAnchorButton" title="insert anchor"><i
+                  class="fa-sharp fa-solid fa-link fa-lg"></i></button>
+              <button type="button" id="insertCodeButton" title="insert code"><i
+                  class="fa-sharp fa-solid fa-code fa-lg"></i></button>
+              <button type="button" id="insertItalicButton" title="insert italic text"><i
+                  class="fa-sharp fa-solid fa-italic fa-lg"></i></button>
+              <button type="button" id="insertBoldButton" title="insert bolded text"><i
+                  class="fa-sharp fa-solid fa-bold fa-lg"></i></button>
+              <button type="button" id="insertUnderlineButton" title="insert underlined text"><i
+                  class="fa-sharp fa-solid fa-underline fa-lg"></i></button>
             </div>
-    
+
             <textarea style="font-size: large;" id="postBody" name="postBody" rows="18" cols="75" required></textarea>
-            <br/>
-            <br/>
-    
+            <br />
+            <br />
+
             <label for="accessToken">Access Token:</label>
-            <br/>
+            <br />
             <input style="font-size: large;" type="password" id="accessToken" name="accessToken" required>
-            <br/>
-            <br/>
+            <br />
+            <br />
 
             <label for="discordID">Discord ID:</label>
-            <br/>
+            <br />
             <input style="font-size: large;" type="text" id="discordID" name="discordID" required>
-            <br/>
-            <br/>
+            <br />
+            <br />
 
             <input type="checkbox" id="isHeadline" name="isHeadline" value="true">
-            <label for="isHeadline">Is Headline</label><br/><br/>
-    
+            <label for="isHeadline">Is Headline</label><br /><br />
+
             <button type="submit">Submit</button>
-        </form>
+          </form>
         </div>
       </div>
     </div>
