@@ -39,9 +39,13 @@ function loadEditor(post) {
     date = postTitleParsed[1]
     author = postTitleParsed[2]
 
-    postBodyParsed = parsePostBody(post.content);
-    editedTag = postBodyParsed[0];
-    body = postBodyParsed[1];
+    if (post.content.includes("Edited on:")) {
+        postBodyParsed = parsePostBody(post.content);
+        editedTag = postBodyParsed[0];
+        body = postBodyParsed[1];
+    } else {
+        body = post.content;
+    }
 
     const editorHTML = `
         <header>Edit Post</header>
