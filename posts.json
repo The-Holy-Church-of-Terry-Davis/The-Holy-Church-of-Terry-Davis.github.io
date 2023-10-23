@@ -1,5 +1,5 @@
 {
-  "total_posts": 6,
+  "total_posts": 7,
   "posts": [
     {
       "id": 0,
@@ -42,6 +42,13 @@
       "title": "New Blog Creation Tool - 8/29/2023 by QAEZZ, The Consigliere",
       "title_link": "https://github.com/The-Holy-Church-of-Terry-Davis/The-Holy-Church-of-Terry-Davis.github.io/tree/main/admin",
       "content": "<!--start-edited-tag--><code>Edited on: 8/31/2023</code><br/><!--end-edited-tag-->I've created a new blog creation tool for the Admins. It's publicly available at <code>/admin</code>. However, only Admins can post as it requires a GitHub Personal Access Token that has write privilege to the site's <a href=\"https://github.com/The-Holy-Church-of-Terry-Davis/The-Holy-Church-of-Terry-Davis.github.io\" target=\"_blank\">repo</a>.<br/>\nNo Admin's token is logged nor stored. You can attempt to create a post, but if the access token is wrong/doesn't have write access, GitHub's API will throw an error. The JS is located at <code>/js/createpost.js</code>.<br/>\nHere are the available endpoints for admins (*coming soon™):\n<pre>\n<code>\n  /admin/createpost\n  /admin/editpost\n  /admin/removepost\n</code>\n</pre>\n\nRandom ass post, that's all.\n<br/><br/>\n<i>Edit: all endpoints are now working.</i>"
+    },
+    {
+      "id": 6,
+      "headline": false,
+      "title": "Our portfolio sites are now live! - 10/23/2023 by QAEZZ, The Consigliere",
+      "title_link": "https://thcotd.org",
+      "content": "The title link above leads to thcotd.org, not the portfolio sites.\n\nAnyways, over last weekend I have made Yendy and I's portfolio sites.\nYendy's site, designed by him, made by me is <a href=\"https://yendy.dev\" target=\"_blank\">yendy.dev</a>.\n\nMy site, designed my me, made by me is <a href=\"https://qaezz.dev\" target=\"_blank\">qaezz.dev</a>.\n\nYendy's site <a href=\"https://github.com/yendisfish/yendis-dev\" target=\"_blank\">repo</a>.\nMy site <a href=\"https://github.com/qaezz/qaezz.dev\" target=\"_blank\">repo</a>."
     }
   ]
 }
