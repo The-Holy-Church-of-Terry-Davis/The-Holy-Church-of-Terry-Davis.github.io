@@ -26,8 +26,7 @@ jobs:
     if: contains('New blog post', ${{ github.event.head_commit.message }})
     runs-on: ubuntu-latest
     steps:
-      - name: Invoke deployment hook
-        uses: tsickert/discord-webhook@v5.3.0
+      - uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
           embed-author-name: 'Blog Update!'
