@@ -1,5 +1,5 @@
 {
-  "total_posts": 8,
+  "total_posts": 9,
   "posts": [
     {
       "id": 0,
@@ -56,6 +56,13 @@
       "title": "Member Highlight Video - 4/1/2024 by QAEZZ, The Consigliere",
       "title_link": "https://twitter.com/thcotd/status/1775051148996542628",
       "content": "<!--start-edited-tag--><code>Edited on: 4/1/2024</code><br/><!--end-edited-tag-->Chopper has made this incredible video for THCoTD.\n<video width=\"400\" controls>\n  <source src=\"https://media.discordapp.net/attachments/1017787547209969684/1224606655996756008/8mb.video-9bC-8oW3lP5g.mp4?ex=661e1ad2&is=660ba5d2&hm=043be8db77d36f0545993dbec0e4db58a7587b8ea1aa1b8b733020f174e5607b&\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n<br/>\n<i>Edit: fixed video source url and width</I>"
+    },
+    {
+      "id": 8,
+      "headline": false,
+      "title": "Test post - 4/2/2024 by QAEZZ, The Consigliere",
+      "title_link": "www.thcotd.org",
+      "content": "This is a test, will be deleted."
     }
   ]
 }
