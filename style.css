@@ -411,7 +411,7 @@ footer {
         border-left-style: ridge;
     }
 
-    #left-section {
+    #left-section, #right-section {
         display: none;
     } 
 
