@@ -1,39 +1,41 @@
-let start = Date.now();
-console.log("Unfortunately, I have to use JS... - QAEZZ");
+function loadPosts() {
+    var start = Date.now();
+    console.log("Unfortunately, I have to use JS... - QAEZZ");
 
-var xhr = new XMLHttpRequest();
-xhr.open('GET', 'posts.json', true);
-xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        var postsData = JSON.parse(xhr.responseText).posts;
-        console.log("Got Data.");
-        processData(postsData);
-    } else if (xhr.readyState === 4 && xhr.status !== 200) {
-        console.error('Error fetching data:', xhr.statusText);
-        processData([
-            {
-                "id": 1,
-                "headline": true,
-                "title": "Error fetching data.",
-                "title_link": "https://thcotd.org",
-                "content": "There was an error fetching data: " + xhr.statusText
-            },
-            {
-                "id": 2,
-                "headline": false,
-                "title": "Error fetching data.",
-                "title_link": "https://thcotd.org",
-                "content": "There was an error fetching data: " + xhr.statusText
-            }
-        ]);
-    }
-};
-xhr.send();
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'posts.json', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var postsData = JSON.parse(xhr.responseText).posts;
+            console.log("Got Post Data.");
+            processPostData(postsData, start);
+        } else if (xhr.readyState === 4 && xhr.status !== 200) {
+            console.error('Error fetching data:', xhr.statusText);
+            processPostData([
+                {
+                    "id": 1,
+                    "headline": true,
+                    "title": "Error fetching data.",
+                    "title_link": "https://thcotd.org",
+                    "content": "There was an error fetching data: " + xhr.statusText
+                },
+                {
+                    "id": 2,
+                    "headline": false,
+                    "title": "Error fetching data.",
+                    "title_link": "https://thcotd.org",
+                    "content": "There was an error fetching data: " + xhr.statusText
+                }
+            ]);
+        }
+    };
+    xhr.send();
+}
 
-function processData(postsData) {
+function processPostData(postsData, start) {
     var middleSectionPosts = document.querySelectorAll('.middle-section-posts');
-    
-    postsData.sort(function(a, b) {
+
+    postsData.sort(function (a, b) {
         return b.id - a.id;
     });
 
@@ -76,7 +78,6 @@ function processData(postsData) {
             }
         }
     }
+    var timeTaken = Date.now() - start;
+    console.log("Posts loaded in: " + timeTaken + " milliseconds");
 }
-
-let timeTaken = Date.now() - start;
-console.log("Posts loaded in: " + timeTaken + " milliseconds");

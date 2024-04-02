@@ -115,7 +115,7 @@ navbar {
     font-size: small;
 }
 
-navbar divider {
+navbar .divider {
     width: 0;
     border-left: .1px solid white;
     margin-top: 4px;

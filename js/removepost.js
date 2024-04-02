@@ -1,5 +1,4 @@
 const validDiscordIDs = [
-    "358736445361487872", // grimtin
     "259445589773647872", // yendy
     "1123758641485459477" // maximumtrollage
 ];
@@ -28,11 +27,10 @@ function parsePostBody(postBody) {
 function loadEditorDisabled(post) {
     const discordIDMap = {
         "Yendy": "259445589773647872",
-        "Grimtin": "358736445361487872",
         "QAEZZ": "1123758641485459477"
     };
 
-    const discordID = discordIDMap[post.title.includes("Yendy") ? "Yendy" : post.title.includes("Grimtin") ? "Grimtin" : post.title.includes("QAEZZ") ? "QAEZZ" : "couldn't resolve ID"];
+    const discordID = discordIDMap[post.title.includes("Yendy") ? "Yendy" : post.title.includes("QAEZZ") ? "QAEZZ" : "couldn't resolve ID"];
 
     if (post.content.includes("Edited on:")) {
         postBodyParsed = parsePostBody(post.content);

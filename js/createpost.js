@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             const isHeadline = document.getElementById("isHeadline").checked;
 
             const validDiscordIDs = [
-                "358736445361487872", // grimtin
                 "259445589773647872", // yendy
                 "1123758641485459477" // maximumtrollage
             ];
@@ -67,9 +66,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 document.getElementById("textEditorForm").appendChild(warning);
                 return;
             }
-            if (discordID == "358736445361487872") {
-                author = "Grimtin, The ???";
-            } else if (discordID == "259445589773647872") {
+            if (discordID == "259445589773647872") {
                 author = "Yendy, The Owner";
             } else if (discordID == "1123758641485459477") {
                 author = "QAEZZ, The Consigliere";
