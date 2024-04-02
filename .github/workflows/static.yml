@@ -41,8 +41,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  
+  notify:
+    if: contains('New blog post', ${{ github.event.head_commit.message }})
+    runs-on: ubuntu-latest
+    steps:
       - name: Invoke deployment hook
-        if: contains('New blog post', github.event.head_commit.message)
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook_url: ${{ secrets.WEBHOOK_URL }}
