@@ -42,9 +42,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Invoke deployment hook
-        uses: distributhor/workflow-webhook@v2
         if: contains('New blog post', github.event.head_commit.message)
+        uses: distributhor/workflow-webhook@v2
         with:
           webhook_url: ${{ secrets.WEBHOOK_URL }}
-          # webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
           data: '{ "embeds": [{ "author": { "name": "Blog Update!", "url": "https://www.thcotd.org"}, "description": "${{ github.event.head_commit.message }}" }] }'
