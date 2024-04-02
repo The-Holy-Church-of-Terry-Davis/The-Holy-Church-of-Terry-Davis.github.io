@@ -22,7 +22,18 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
+  notify:
+    if: contains('New blog post', ${{ github.event.head_commit.message }})
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invoke deployment hook
+        uses: tsickert/discord-webhook@v5.3.0
+        with:
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          embed-author-name: 'Blog Update!'
+          embed-author-url: 'https://www.thcotd.org'
+          embed-description: ${{ github.event.head_commit.message }}
+
   deploy:
     environment:
       name: github-pages
@@ -41,15 +52,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  
-  notify:
-    if: contains('New blog post', ${{ github.event.head_commit.message }})
-    runs-on: ubuntu-latest
-    steps:
-      - name: Invoke deployment hook
-        uses: tsickert/discord-webhook@v5.3.0
-        with:
-          webhook_url: ${{ secrets.WEBHOOK_URL }}
-          embed-author-name: 'Blog Update!'
-          embed-author-url: 'https://www.thcotd.org'
-          embed-description: ${{ github.event.head_commit.message }}
