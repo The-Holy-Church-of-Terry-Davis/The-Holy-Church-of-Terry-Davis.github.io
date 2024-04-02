@@ -1,5 +1,5 @@
 {
-  "total_posts": 7,
+  "total_posts": 8,
   "posts": [
     {
       "id": 0,
@@ -49,6 +49,13 @@
       "title": "Our portfolio sites are now live! - 10/23/2023 by QAEZZ, The Consigliere",
       "title_link": "https://thcotd.org",
       "content": "The title link above leads to thcotd.org, not the portfolio sites.\n\nAnyways, over last weekend I have made Yendy and I's portfolio sites.\nYendy's site, designed by him, made by me is <a href=\"https://yendy.dev\" target=\"_blank\">yendy.dev</a>.\n\nMy site, designed my me, made by me is <a href=\"https://qaezz.dev\" target=\"_blank\">qaezz.dev</a>.\n\nYendy's site <a href=\"https://github.com/yendisfish/yendis-dev\" target=\"_blank\">repo</a>.\nMy site <a href=\"https://github.com/qaezz/qaezz.dev\" target=\"_blank\">repo</a>."
+    },
+    {
+      "id": 7,
+      "headline": true,
+      "title": "Member Highlight Video - 4/1/2024 by QAEZZ, The Consigliere",
+      "title_link": "https://twitter.com/thcotd/status/1775051148996542628",
+      "content": "Chopper has made this incredible video for THCoTD.\n<video controls>\n  <source src=\"https://media.discordapp.net/attachments/1017787547209969684/1224606655996756008/8mb.video-9bC-8oW3lP5g.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>"
     }
   ]
 }
