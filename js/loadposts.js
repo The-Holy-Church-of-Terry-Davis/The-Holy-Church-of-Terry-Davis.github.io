@@ -3,7 +3,7 @@ function loadPosts() {
     console.log("Unfortunately, I have to use JS... - QAEZZ");
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'posts.json', true);
+    xhr.open('GET', 'https://raw.githubusercontent.com/The-Holy-Church-of-Terry-Davis/The-Holy-Church-of-Terry-Davis.github.io/main/posts.json', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var postsData = JSON.parse(xhr.responseText).posts;

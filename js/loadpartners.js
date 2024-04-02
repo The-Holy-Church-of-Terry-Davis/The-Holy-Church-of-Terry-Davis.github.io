@@ -2,7 +2,7 @@
 function loadPartners() {
     var start = Date.now();
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'partners.json', true);
+    xhr.open('GET', 'https://raw.githubusercontent.com/The-Holy-Church-of-Terry-Davis/The-Holy-Church-of-Terry-Davis.github.io/main/partners.json', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var partnersData = JSON.parse(xhr.responseText).partners;
