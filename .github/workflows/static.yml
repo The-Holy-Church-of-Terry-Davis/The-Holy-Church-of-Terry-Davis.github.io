@@ -30,9 +30,11 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
-          embed-author-name: 'Blog Update!'
-          embed-author-url: 'https://www.thcotd.org'
+          embed-title: 'Blog Update!'
           embed-description: ${{ github.event.head_commit.message }}
+          embed-author-name: ${{ github.event.head_commit.committer }}
+          embed-author-url: ${{ github.event.head_commit.url }}
+          embed-url: 'https://www.thcotd.org'
 
   deploy:
     environment:
