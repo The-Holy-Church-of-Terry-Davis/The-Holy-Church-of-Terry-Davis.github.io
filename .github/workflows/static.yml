@@ -32,7 +32,7 @@ jobs:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
           embed-title: 'Blog Update!'
           embed-description: ${{ github.event.head_commit.message }}
-          embed-author-name: ${{ github.event.head_commit.committer }}
+          embed-author-name: ${{ github.event.head_commit.committer.username }}
           embed-author-url: ${{ github.event.head_commit.url }}
           embed-url: 'https://www.thcotd.org'
 
