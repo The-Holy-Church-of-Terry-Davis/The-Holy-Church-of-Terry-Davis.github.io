@@ -1,5 +1,5 @@
 {
-  "total_posts": 9,
+  "total_posts": 10,
   "posts": [
     {
       "id": 0,
@@ -63,6 +63,13 @@
       "title": "Test post - 4/2/2024 by QAEZZ, The Consigliere",
       "title_link": "www.thcotd.org",
       "content": "This is a test, will be deleted."
+    },
+    {
+      "id": 9,
+      "headline": false,
+      "title": "Test Post - 4/2/2024 by QAEZZ, The Consigliere",
+      "title_link": "www.thcotd.org",
+      "content": "Hopefully the GH actions work! (This post will be deleted)"
     }
   ]
 }
