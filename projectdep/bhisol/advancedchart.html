@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THCoTD Chart</title>
+
+    <meta name="twitter:card" content="summary_image" />
+    <meta name="twitter:image" content="https://thcotd.org/assets/ELEPHANT.png">
+    <meta name="twitter:image:src" content="https://thcotd.org/assets/ELEPHANT.png">
+    <meta property="og:title" content="The Holy Church of Terry Davis​‌​‌​‍‍​‍‌​​⁠‍​​‌‌​⁠‌‍⁠⁠‌‌⁠⁠⁠​" />
+    <meta property="og:description"
+        content="THCoTD is a community of devs that worship God and admire Terry A. Davis." />
+    <meta name="theme-color" content="#f3dc75" />
+</head>
+
+<body style="background-color: #151924;">
+    <div class="tradingview-widget-container" id="inject">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright">
+            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                <span class="blue-text">Track all markets on TradingView</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(document.location.search);
+        const symbol = params.get("symbol");
+        const interval = params.get("interval");
+
+        const script = `
+            {
+              "width": "980",
+              "height": "610",
+              "symbol": "${symbol}",
+              "interval": "${interval}",
+              "timezone": "Etc/UTC",
+              "theme": "dark",
+              "style": "1",
+              "locale": "en",
+              "hide_top_toolbar": true,
+              "allow_symbol_change": false,
+              "calendar": false,
+              "support_host": "https://www.tradingview.com"
+            }`;
+        
+        const scriptEl = document.createElement("script");
+        scriptEl.setAttribute("async", "");
+        scriptEl.setAttribute("src", "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js");
+        scriptEl.textContent = script;
+
+        document.getElementById("inject").appendChild(scriptEl);
+    </script>
+</body>
+
+</html>
