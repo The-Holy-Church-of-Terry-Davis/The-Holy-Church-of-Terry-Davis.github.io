@@ -15,14 +15,21 @@
     <meta name="theme-color" content="#f3dc75" />
 </head>
 
-<body style="background-color: #151924; overflow: hidden;">
+<body>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #151924;
+            overflow: hidden;
+        }
+    </style>
+
     <div class="tradingview-widget-container" id="inject">
         <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright">
-            <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-                <span class="blue-text">Track all markets on TradingView</span>
-            </a>
-        </div>
     </div>
 
     <script>
