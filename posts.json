@@ -1,5 +1,5 @@
 {
-  "total_posts": 8,
+  "total_posts": 9,
   "posts": [
     {
       "id": 0,
@@ -56,6 +56,13 @@
       "title": "Member Highlight Video - 4/1/2024 by QAEZZ, The Consigliere",
       "title_link": "https://twitter.com/thcotd/status/1775051148996542628",
       "content": "<!--start-edited-tag--><code>Edited on: 4/28/2024</code><br/><!--end-edited-tag-->Chopper has made this incredible video for THCoTD.\n<video width=\"400\" controls>\n  <source src=\"https://thcotd.org/assets/videos/chopper.mp4\" type=\"video/mp4\">\n  Your browser does not support the video tag.\n</video>\n<br/>\n<i>Edit: fixed video source url and width</I>"
+    },
+    {
+      "id": 8,
+      "headline": false,
+      "title": "Chopper's THCoTD Iceberg V1.0 - 7/9/2024 by QAEZZ, The Consigliere",
+      "title_link": "https://twitter.com/thcotd/status/1810913637734961489",
+      "content": "Chopper is actually carrying.\n<img src=\"https://thcotd.org/assets/images/thcotd-iceberg-v1.png\" alt=\"THCoTD Iceberg V1\" width=\"50%\"/>"
     }
   ]
 }
